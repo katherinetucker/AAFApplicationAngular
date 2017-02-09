@@ -9,11 +9,6 @@ angular.module('myApp')
     'Denied'
   ];
 
-  $scope.viewApp = function (id) {
-    // will need to change once admin review page is done
-    $state.go('applicationInformation', { appId : id });
-  };
-
   var loadTable = function () {
     DataService.getApplications().then(function (response) {
       $scope.applications = response;
